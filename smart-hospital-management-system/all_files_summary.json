@@ -1,0 +1,21 @@
+{
+  "backend/main.mo": "Minimal Motoko actor with a single `healthCheck` query function that always returns true.",
+  "feature_evidence.json": "Feature evidence report mapping implemented features (landing page, hero section, key features, footer) to their source files, components, and test IDs with confidence levels.",
+  "frontend-file-summaries.txt": "JSON dictionary providing one-line descriptions of each frontend source file for build planning reference.",
+  "frontend/index.css": "Base Tailwind CSS entry point defining OKLCH CSS custom properties for light and dark mode design tokens (colors, radius, sidebar, charts).",
+  "frontend/index.html": "HTML shell for the React app titled 'Smart Hospital Management System' that mounts the app at `#root` via `src/main.tsx`.",
+  "frontend/src/App.tsx": "Root React component that configures TanStack Router with two routes: `/` rendering LandingPage and `/login` rendering LoginPage.",
+  "frontend/src/components/Footer.tsx": "Full-width dark-blue footer with brand info, navigation links (including Login portal), services list, and contact details including an emergency hotline.",
+  "frontend/src/components/HeroSection.tsx": "Full-screen hero section with a background image, gradient overlay, headline, subheadline, 'Book an Appointment' CTA, and a red 'EMERGENCY: Find Nearest Hospital' CTA button.",
+  "frontend/src/components/KeyFeaturesSection.tsx": "Responsive four-card grid section highlighting Lightning-Fast Records, AI-Powered Scheduling, Real-Time Emergency Routing, and Flawless Resource Management with icons, badges, and bullet points.",
+  "frontend/src/components/Navbar.tsx": "Responsive navigation bar for the MediCore app with logo, nav links, Sign In and Book Appointment CTAs, and a collapsible mobile menu.",
+  "frontend/src/hooks/useActor.ts": "Custom hook that creates and caches an ICP backend actor (authenticated or anonymous) using React Query, and invalidates dependent queries when the actor changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides an InternetIdentityProvider and useInternetIdentity hook for managing ICP Internet Identity authentication state, including login, logout, and identity persistence.",
+  "frontend/src/hooks/useQueries.ts": "Exports a useHealthCheck hook that calls the backend healthCheck method via the actor, enabled only when the actor is ready.",
+  "frontend/src/index.css": "Global CSS file that imports Google Fonts, sets up Tailwind layers, and defines light/dark CSS custom properties for the medical-themed color palette.",
+  "frontend/src/main.tsx": "Application entry point that mounts the React app wrapped with QueryClientProvider and InternetIdentityProvider.",
+  "frontend/src/pages/LandingPage.tsx": "Landing page layout that composes the Navbar, HeroSection, KeyFeaturesSection, and Footer components.",
+  "frontend/src/pages/LoginPage.tsx": "Login page with role selection (patient, doctor, admin), email/password form, and a simulated submit handler with loading state.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration extending the theme with custom fonts, OKLCH-based color tokens (including a medical blue palette), border radii, shadows, and plugins for typography, container queries, and animations.",
+  "project_state.json": "Tracks the project state (version 3) for a Smart Hospital Management System built with React and Tailwind CSS, documenting existing features, architectural notes, known issues, and image requirements for the Landing Page and Role-Based Login Page."
+}

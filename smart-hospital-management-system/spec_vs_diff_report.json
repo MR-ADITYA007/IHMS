@@ -1,0 +1,71 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-28T08:44:38.480Z",
+  "summary": "The diff implements most of the required features: Landing Page, Hero Section, Key Features, Footer, Role-Based Login Page, client-side routing, and a Motoko backend stub. The main gap is REQ-8 — the hero background image file itself (hero-bg.dim_1920x1080.png) is not present in the diff, only the CSS reference to it. The 'Book an Appointment' CTA in HeroSection does not pre-select the Patient role. The backend exposes healthCheck returning Bool rather than a ping returning Text, which satisfies the spirit of REQ-7.",
+  "missing_requirements": [
+    {
+      "id": "REQ-8",
+      "requirement": "Generate a hero background image served from frontend/public/assets/generated/hero-bg.dim_1920x1080.png",
+      "reason": "The HeroSection references the image URL '/assets/generated/hero-bg.dim_1920x1080.png' but no image file is present in the diff. The image file itself was not added to frontend/public/assets/generated/.",
+      "evidence": [
+        "frontend/src/components/HeroSection.tsx"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "requirement": "Clicking 'Book an Appointment' navigates to '/login' pre-selecting the Patient role",
+      "reason": "In HeroSection.tsx, the 'Book an Appointment' button calls navigate({ to: '/login' }) without passing a role search param, so the Patient role is not pre-selected. The Navbar does pass role:patient but the primary HeroSection CTA does not.",
+      "evidence": [
+        "frontend/src/components/HeroSection.tsx",
+        "frontend/src/components/Navbar.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "A fixed top Navbar component with hamburger mobile menu and dual CTA buttons was added.",
+      "reason": "The build request specifies a Landing Page with Hero, Key Features, and Footer sections. No top navigation bar was requested as a separate requirement.",
+      "evidence": [
+        "frontend/src/components/Navbar.tsx",
+        "frontend/src/pages/LandingPage.tsx"
+      ]
+    },
+    {
+      "description": "Show/hide password toggle and loading spinner state on the Login Page.",
+      "reason": "REQ-5 only specifies Email and Password fields, role tabs, and a Submit button. The show-password toggle and loading state simulation go beyond what was requested.",
+      "evidence": [
+        "frontend/src/pages/LoginPage.tsx"
+      ]
+    },
+    {
+      "description": "Trust indicator badges (HIPAA Compliant, Real-Time Processing, ML-Powered Insights) added to the Hero Section.",
+      "reason": "These UI elements were not requested in REQ-2 or anywhere else in the build request.",
+      "evidence": [
+        "frontend/src/components/HeroSection.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.82,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/HeroSection.tsx",
+    "frontend/src/components/KeyFeaturesSection.tsx",
+    "frontend/src/components/Navbar.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/src/pages/LandingPage.tsx",
+    "frontend/src/pages/LoginPage.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

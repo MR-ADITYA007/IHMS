@@ -1,0 +1,97 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Smart Hospital Management System — a React + Tailwind CSS web app combining RDBMS/ACID database management, Priority Queue/Hashing data structures, and Logistic Regression ML to address healthcare inefficiencies. Includes a Landing Page and a Role-Based Login Page.",
+  "architectural_notes": [
+    "Tech stack: React with Tailwind CSS",
+    "Design theme: medical blues, clean whites, soft grays — clean, trustworthy, tech-forward",
+    "Components must be modular and fully responsive (mobile + desktop)"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Abstract medical hero background with soft blue gradient, subtle light-ray and geometric grid overlay, clean white space, modern tech-forward aesthetic (hero-bg.dim_1920x1080.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-responsive-landing-page-with-a-medical-blue-clean-white-and-soft-gray-visual-theme-the-page-must-feel-trustworthy-and-tech-forward-with-consistent-typography-spacing-and-color-usage-across-all-sections",
+      "title": "Create a responsive Landing Page with a medical-blue, clean-white, and soft-gray visual theme. The page must feel trustworthy and tech-forward, with consistent typography, spacing, and color usage across all sections.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-hero-section-on-the-landing-page-with-1-a-strong-headline-next-generation-healthcare-management-2-a-subheadline-emphasizing-speed-ai-driven-scheduling-and-real-time-emergency-routing-3-a-primary-cta-button-book-an-appointment-and-4-a-visually-distinct-red-secondary-cta-button-labeled-emergency-find-nearest-hospital",
+      "title": "Implement a Hero Section on the Landing Page with: (1) a strong headline 'Next-Generation Healthcare Management', (2) a subheadline emphasizing speed, AI-driven scheduling, and real-time emergency routing, (3) a primary CTA button 'Book an Appointment', and (4) a visually distinct red secondary CTA button labeled 'EMERGENCY: Find Nearest Hospital'.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-key-features-section-on-the-landing-page-that-visually-highlights-four-core-technical-pillars-as-cards-or-feature-blocks-1-lightning-fast-records-instant-patient-history-retrieval-2-ai-powered-scheduling-smart-overbooking-prevention-and-zero-wait-times-using-predictive-ml-3-real-time-emergency-routing-location-based-immediate-hospital-matching-4-flawless-resource-management-conflict-free-bed-allocation-and-doctor-scheduling",
+      "title": "Implement a Key Features Section on the Landing Page that visually highlights four core technical pillars as cards or feature blocks: (1) Lightning-Fast Records — instant patient history retrieval; (2) AI-Powered Scheduling — smart overbooking prevention and zero wait times using predictive ML; (3) Real-Time Emergency Routing — location-based immediate hospital matching; (4) Flawless Resource Management — conflict-free bed allocation and doctor scheduling.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-footer-on-the-landing-page-with-standard-navigation-links-e-g-home-features-contact-contact-information-and-a-clearly-labeled-link-to-the-login-portal",
+      "title": "Implement a Footer on the Landing Page with standard navigation links (e.g., Home, Features, Contact), contact information, and a clearly labeled link to the Login portal.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-role-based-login-page-with-a-centered-minimalist-design-include-a-role-selection-toggle-or-tab-bar-at-the-top-allowing-the-user-to-select-one-of-three-roles-patient-doctor-or-admin-below-the-role-selector-render-a-login-form-with-email-and-password-input-fields-and-a-submit-button-the-active-role-tab-must-be-visually-highlighted",
+      "title": "Create a Role-Based Login Page with a centered, minimalist design. Include a role selection toggle or tab bar at the top allowing the user to select one of three roles: Patient, Doctor, or Admin. Below the role selector, render a login form with Email and Password input fields and a Submit button. The active role tab must be visually highlighted.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-set-up-client-side-routing-so-that-the-root-path-renders-the-landing-page-and-login-renders-the-role-based-login-page-navigation-between-the-two-pages-must-work-via-the-cta-buttons-and-footer-link-on-the-landing-page",
+      "title": "Set up client-side routing so that the root path '/' renders the Landing Page and '/login' renders the Role-Based Login Page. Navigation between the two pages must work via the CTA buttons and footer link on the Landing Page.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-generate-a-hero-background-image-for-the-landing-page-a-clean-modern-hospital-medical-abstract-with-soft-blue-gradients-light-geometric-patterns-and-white-space-suitable-as-a-full-width-hero-section-background",
+      "title": "Generate a hero background image for the Landing Page: a clean, modern hospital/medical abstract with soft blue gradients, light geometric patterns, and white space — suitable as a full-width hero section background.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Landing Page with Hero section (headline, subheadline, two CTAs), Key Features section (4 pillars), and Footer",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Role-Based Login Page with Patient/Doctor/Admin role toggle, email/password fields, centered minimalist design",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Stub a minimal Motoko backend actor that exposes a basic health-check or placeholder query so the frontend has a backend canister to bind to. No persistent state or ML logic is required at this stage.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Smart Hospital Management System",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

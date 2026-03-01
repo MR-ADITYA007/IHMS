@@ -1,0 +1,182 @@
+{
+  "kind": "build_request",
+  "title": "Smart Hospital Management System — Landing Page & Role-Based Login",
+  "projectName": "Smart Hospital",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a responsive Landing Page with a medical-blue, clean-white, and soft-gray visual theme. The page must feel trustworthy and tech-forward, with consistent typography, spacing, and color usage across all sections.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "The design should be clean, trustworthy, and tech-forward (think medical blues, clean whites, and soft grays)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Color palette consistently uses medical blues, white backgrounds, and soft gray accents",
+        "Page is fully responsive on mobile (320px+) and desktop (1280px+)",
+        "Typography is clean and professional throughout"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement a Hero Section on the Landing Page with: (1) a strong headline 'Next-Generation Healthcare Management', (2) a subheadline emphasizing speed, AI-driven scheduling, and real-time emergency routing, (3) a primary CTA button 'Book an Appointment', and (4) a visually distinct red secondary CTA button labeled 'EMERGENCY: Find Nearest Hospital'.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "A strong headline (e.g., \"Next-Generation Healthcare Management\").",
+          "Two primary Call-to-Action (CTA) buttons: \"Book an Appointment\" (Primary) and a highly visible, red \"EMERGENCY: Find Nearest Hospital\" (Secondary)."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Headline 'Next-Generation Healthcare Management' is prominently displayed",
+        "Subheadline references speed, AI-driven scheduling, and real-time emergency routing",
+        "'Book an Appointment' button is styled as the primary action",
+        "'EMERGENCY: Find Nearest Hospital' button is red and visually prominent",
+        "Both buttons are clearly visible on mobile and desktop"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Implement a Key Features Section on the Landing Page that visually highlights four core technical pillars as cards or feature blocks: (1) Lightning-Fast Records — instant patient history retrieval; (2) AI-Powered Scheduling — smart overbooking prevention and zero wait times using predictive ML; (3) Real-Time Emergency Routing — location-based immediate hospital matching; (4) Flawless Resource Management — conflict-free bed allocation and doctor scheduling.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Key Features Section (Crucial for our project): Visually highlight our four core technical pillars"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All four feature pillars are displayed with distinct icons or visual indicators",
+        "Each pillar card includes a title and descriptive text matching the specified content",
+        "Section layout adapts gracefully from single-column on mobile to multi-column on desktop"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Implement a Footer on the Landing Page with standard navigation links (e.g., Home, Features, Contact), contact information, and a clearly labeled link to the Login portal.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Footer: Standard links, contact info, and a link to the Login portal."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Footer contains navigation links including Home, Features, and Contact",
+        "Contact information (e.g., email or phone placeholder) is present",
+        "A 'Login' link in the footer navigates to the Login page",
+        "Footer is responsive and stacks gracefully on mobile"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Create a Role-Based Login Page with a centered, minimalist design. Include a role selection toggle or tab bar at the top allowing the user to select one of three roles: Patient, Doctor, or Admin. Below the role selector, render a login form with Email and Password input fields and a Submit button. The active role tab must be visually highlighted.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Role Selection Toggle/Tabs: Users must be able to select their role before logging in. The roles are: Patient, Doctor, and Admin.",
+          "Form Fields: Standard Email and Password fields.",
+          "Styling: Keep it centered, minimalist, and easy to read."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Three role tabs (Patient, Doctor, Admin) are displayed and selectable",
+        "Active role tab is visually distinguished from inactive tabs",
+        "Email and Password fields are present and labeled",
+        "Submit/Login button is clearly visible",
+        "Layout is centered on all screen sizes",
+        "Form is accessible with proper labels and input types"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Set up client-side routing so that the root path '/' renders the Landing Page and '/login' renders the Role-Based Login Page. Navigation between the two pages must work via the CTA buttons and footer link on the Landing Page.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "a link to the Login portal",
+          "components are modular"
+        ]
+      },
+      "acceptanceCriteria": [
+        "'/' route renders the Landing Page",
+        "'/login' route renders the Login Page",
+        "Clicking the footer Login link navigates to '/login'",
+        "Clicking 'Book an Appointment' navigates to '/login' pre-selecting the Patient role (or scrolls to a relevant section)",
+        "Browser back/forward navigation works correctly"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Stub a minimal Motoko backend actor that exposes a basic health-check or placeholder query so the frontend has a backend canister to bind to. No persistent state or ML logic is required at this stage.",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Smart Hospital Management System that combines advanced Database Management (RDBMS/ACID), Data Structures (Priority Queues/Hashing), and Machine Learning (Logistic Regression)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "backend/main.mo compiles without errors",
+        "Actor exposes at least one query function (e.g., ping : () -> async Text)"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Generate a hero background image for the Landing Page: a clean, modern hospital/medical abstract with soft blue gradients, light geometric patterns, and white space — suitable as a full-width hero section background.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "clean, trustworthy, and tech-forward (think medical blues, clean whites, and soft grays)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Hero section uses the generated image as a background or decorative visual",
+        "Image is served from frontend/public/assets/generated/",
+        "Image renders crisply on both mobile and desktop"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not use blue & purple color combinations — stick to medical blues, clean whites, and soft grays as specified",
+    "All frontend paths in frontend/src/hooks/ and frontend/src/components/ui are read-only and must not be modified",
+    "All Motoko logic must remain in a single actor in backend/main.mo"
+  ],
+  "nonGoals": [
+    "Actual ML/Logistic Regression implementation in the backend",
+    "Real database integration (RDBMS/ACID) at this stage",
+    "Priority Queue or Hashing data structure implementation",
+    "Real authentication or Internet Identity integration",
+    "Emergency hospital geolocation or map integration",
+    "Patient/Doctor/Admin dashboard screens beyond the login page"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Abstract medical hero background with soft blue gradient, subtle light-ray and geometric grid overlay, clean white space, modern tech-forward aesthetic (hero-bg.dim_1920x1080.png)"
+    ],
+    "edits": []
+  }
+}

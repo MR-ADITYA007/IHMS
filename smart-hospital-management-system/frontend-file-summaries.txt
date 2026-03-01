@@ -1,0 +1,12 @@
+{
+  "frontend/src/index.css": "Global styles with a medical-blue OKLCH color system, Inter + Plus Jakarta Sans fonts, and semantic design tokens for both light and dark modes.",
+  "frontend/tailwind.config.js": "Extended Tailwind config with medical-blue color scale, emergency red, custom font families (Inter/Plus Jakarta Sans), card/button shadows, and fade/pulse animations.",
+  "frontend/src/App.tsx": "Root app component that sets up TanStack Router with two routes: `/` for LandingPage and `/login` for LoginPage.",
+  "frontend/src/hooks/useQueries.ts": "React Query hook wrapping the backend `healthCheck` query call via the actor.",
+  "frontend/src/components/Navbar.tsx": "Fixed top navigation bar with logo, desktop nav links, mobile hamburger menu, and CTA buttons linking to the login page.",
+  "frontend/src/components/HeroSection.tsx": "Full-screen hero section with the generated background image, headline, subheadline, primary \"Book an Appointment\" CTA, and red \"EMERGENCY: Find Nearest Hospital\" CTA.",
+  "frontend/src/components/KeyFeaturesSection.tsx": "Four-pillar feature grid showcasing Lightning-Fast Records, AI-Powered Scheduling, Real-Time Emergency Routing, and Flawless Resource Management with icons, badges, bullets, and a stats row.",
+  "frontend/src/components/Footer.tsx": "Full-width footer with brand info, navigation links (including Login portal), services list, contact details, emergency hotline, and caffeine.ai attribution.",
+  "frontend/src/pages/LandingPage.tsx": "Landing page that composes Navbar, HeroSection, KeyFeaturesSection, and Footer into a full-page layout.",
+  "frontend/src/pages/LoginPage.tsx": "Centered role-based login page with Patient/Doctor/Admin tab selector, email/password form with show-password toggle, loading state, and security badge."
+}

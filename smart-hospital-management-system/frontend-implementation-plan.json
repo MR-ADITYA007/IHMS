@@ -1,0 +1,152 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Smart Hospital Management System — Landing Page & Role-Based Login",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Create a responsive Landing Page with a medical-blue, clean-white, and soft-gray visual theme ensuring trustworthy and tech-forward design with consistent typography, spacing, and color usage",
+      "acceptanceCriteria": [
+        "Color palette consistently uses medical blues, white backgrounds, and soft gray accents",
+        "Page is fully responsive on mobile (320px+) and desktop (1280px+)",
+        "Typography is clean and professional throughout"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Define global CSS custom properties for the medical-blue color palette (primary blues, clean whites, soft grays), set base typography rules for clean professional fonts, and ensure consistent spacing variables for the entire application"
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend Tailwind theme with custom color tokens for medical blues, soft grays, and white backgrounds; configure responsive breakpoints for 320px+ mobile and 1280px+ desktop; add custom spacing scale for consistent layout"
+        },
+        {
+          "path": "frontend/src/pages/LandingPage.tsx",
+          "operation": "create",
+          "description": "Create the main Landing Page component with responsive container layout, applying the medical-blue theme consistently across all sections, ensuring mobile-first responsive design with proper breakpoints"
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Implement a Hero Section with headline 'Next-Generation Healthcare Management', subheadline emphasizing speed and AI-driven features, primary CTA 'Book an Appointment', and red secondary CTA 'EMERGENCY: Find Nearest Hospital'",
+      "acceptanceCriteria": [
+        "Headline 'Next-Generation Healthcare Management' is prominently displayed",
+        "Subheadline references speed, AI-driven scheduling, and real-time emergency routing",
+        "'Book an Appointment' button is styled as the primary action",
+        "'EMERGENCY: Find Nearest Hospital' button is red and visually prominent",
+        "Both buttons are clearly visible on mobile and desktop"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/HeroSection.tsx",
+          "operation": "create",
+          "description": "Create Hero Section component with full-width layout containing the headline 'Next-Generation Healthcare Management', subheadline emphasizing speed/AI-driven scheduling/real-time emergency routing, primary 'Book an Appointment' button (medical blue), and visually distinct red 'EMERGENCY: Find Nearest Hospital' button; use the generated hero background image from frontend/public/assets/generated/hero-bg.dim_1920x1080.png as the section background; ensure responsive typography and button sizing for mobile and desktop"
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Implement a Key Features Section displaying four core technical pillars as visual cards: Lightning-Fast Records, AI-Powered Scheduling, Real-Time Emergency Routing, and Flawless Resource Management",
+      "acceptanceCriteria": [
+        "All four feature pillars are displayed with distinct icons or visual indicators",
+        "Each pillar card includes a title and descriptive text matching the specified content",
+        "Section layout adapts gracefully from single-column on mobile to multi-column on desktop"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/KeyFeaturesSection.tsx",
+          "operation": "create",
+          "description": "Create Key Features Section component with a grid layout displaying four feature cards: (1) Lightning-Fast Records with instant patient history retrieval description, (2) AI-Powered Scheduling with smart overbooking prevention and zero wait times using predictive ML description, (3) Real-Time Emergency Routing with location-based immediate hospital matching description, (4) Flawless Resource Management with conflict-free bed allocation and doctor scheduling description; include distinct icons for each pillar; implement responsive grid (single-column mobile, multi-column desktop)"
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Implement a Footer with standard navigation links (Home, Features, Contact), contact information, and a clearly labeled link to the Login portal",
+      "acceptanceCriteria": [
+        "Footer contains navigation links including Home, Features, and Contact",
+        "Contact information (e.g., email or phone placeholder) is present",
+        "A 'Login' link in the footer navigates to the Login page",
+        "Footer is responsive and stacks gracefully on mobile"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "create",
+          "description": "Create Footer component with navigation links (Home, Features, Contact), contact information placeholders (email/phone), and a 'Login' link that navigates to '/login'; implement responsive layout that stacks vertically on mobile and spreads horizontally on desktop; apply medical-blue theme colors"
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Create a Role-Based Login Page with centered minimalist design, role selection toggle (Patient, Doctor, Admin), and login form with Email and Password fields",
+      "acceptanceCriteria": [
+        "Three role tabs (Patient, Doctor, Admin) are displayed and selectable",
+        "Active role tab is visually distinguished from inactive tabs",
+        "Email and Password fields are present and labeled",
+        "Submit/Login button is clearly visible",
+        "Layout is centered on all screen sizes",
+        "Form is accessible with proper labels and input types"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/LoginPage.tsx",
+          "operation": "create",
+          "description": "Create Login Page component with centered layout containing a role selection tab bar (Patient, Doctor, Admin) at the top with visual highlighting for the active role, followed by a login form with labeled Email (type='email') and Password (type='password') input fields, and a Submit/Login button; implement responsive centered design that works on all screen sizes; apply medical-blue theme with accessible form labels"
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Set up client-side routing so '/' renders Landing Page and '/login' renders Login Page, with navigation wired through CTAs and footer links",
+      "acceptanceCriteria": [
+        "'/' route renders the Landing Page",
+        "'/login' route renders the Login Page",
+        "Clicking the footer Login link navigates to '/login'",
+        "Clicking 'Book an Appointment' navigates to '/login' pre-selecting the Patient role (or scrolls to a relevant section)",
+        "Browser back/forward navigation works correctly"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Set up React Router with routes: '/' rendering LandingPage and '/login' rendering LoginPage; ensure browser back/forward navigation works correctly"
+        },
+        {
+          "path": "frontend/src/components/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Wire 'Book an Appointment' button to navigate to '/login' (optionally with state to pre-select Patient role); wire 'EMERGENCY: Find Nearest Hospital' button action (can be placeholder or navigate to '/login')"
+        },
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "modify",
+          "description": "Wire the 'Login' link in the footer to navigate to '/login' using React Router Link component"
+        },
+        {
+          "path": "frontend/src/pages/LandingPage.tsx",
+          "operation": "modify",
+          "description": "Compose the Landing Page by importing and rendering HeroSection, KeyFeaturesSection, and Footer components in the correct order"
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Wire the generated hero background image into the Landing Page Hero Section as a full-width background visual",
+      "acceptanceCriteria": [
+        "Hero section uses the generated image as a background or decorative visual",
+        "Image is served from frontend/public/assets/generated/",
+        "Image renders crisply on both mobile and desktop"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Reference the generated hero background image at frontend/public/assets/generated/hero-bg.dim_1920x1080.png as a background image for the Hero Section; ensure it covers the full width and renders crisply on both mobile and desktop viewports using CSS background-size and background-position properties"
+        }
+      ]
+    }
+  ]
+}
